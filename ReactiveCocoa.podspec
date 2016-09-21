@@ -1,28 +1,63 @@
-Pod::Spec.new do |s|
-  s.name = 'ReactiveCocoa'
-  s.version = '5.0.0-alpha.1'
+{
+  "name": "ReactiveCocoa",
+  "version": "2.4.4",
+  "summary": "A framework for composing and transforming streams of values.",
+  "homepage": "https://github.com/blog/1107-reactivecocoa-is-now-open-source",
+  "authors": {
+    "Josh Abernathy": "josh@github.com"
+  },
+  "source": {
+    "git": "https://github.com/ReactiveCocoa/ReactiveCocoa.git",
+    "tag": "v2.4.4"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "description": "ReactiveCocoa (RAC) is an Objective-C framework for Functional Reactive Programming. It provides APIs for composing and transforming streams of values.",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "6.0",
+    "osx": "10.8"
+  },
+  "prepare_command": "    find . \\( -regex '.*EXT.*\\.[mh]$' -o -regex '.*metamacros\\.[mh]$' \\) -execdir mv {} RAC{} \\;\n    find . -regex '.*\\.[hm]' -exec sed -i '' -E 's@\"(EXT.*|metamacros)\\.h\"@\"RAC\\1.h\"@' {} \\;\n    find . -regex '.*\\.[hm]' -exec sed -i '' -E 's@<ReactiveCocoa/(EXT.*)\\.h>@<ReactiveCocoa/RAC\\1.h>@' {} \\;\n",
+  "default_subspecs": "UI",
+  "subspecs": [
+    {
+      "name": "no-arc",
+      "source_files": "ReactiveCocoa/RACObjCRuntime.{h,m}",
+      "requires_arc": false
+    },
+    {
+      "name": "Core",
+      "dependencies": {
+        "ReactiveCocoa/no-arc": [
 
-  s.summary = 'A framework for using ReactiveSwift with Apple\'s Cocoa frameworks.'
-  s.description = 'ReactiveCocoa (RAC) is a Cocoa framework built on top of ReactiveSwift. It provides APIs for using ReactiveSwift with Apple\'s Cocoa frameworks.'
+        ]
+      },
+      "source_files": [
+        "ReactiveCocoa/*.{d,h,m}",
+        "ReactiveCocoa/extobjc/*.{h,m}"
+      ],
+      "private_header_files": [
+        "ReactiveCocoa/*Private.h"
+      ],
+      "exclude_files": "ReactiveCocoa/*{RACObjCRuntime,AppKit,NSControl,NSText,UIActionSheet,UI}*"
+    },
+    {
+      "name": "UI",
+      "dependencies": {
+        "ReactiveCocoa/Core": [
 
-  s.author = 'ReactiveCocoa'
-  s.homepage = 'https://github.com/ReactiveCocoa/ReactiveCocoa'
-  s.license = { :type => 'MIT', :file => 'LICENSE.md' }
-  
-  s.source = {
-    :git => 'https://github.com/ReactiveCocoa/ReactiveCocoa.git',
-    :commit => '631120c278ec7a71dc03ce98d42a7039f57da544'
-    # :tag => 'v#{s.version}'
-  }
-
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
-  
-  s.framework = 'Foundation'
-
-  s.dependency 'ReactiveSwift', '~> 1.0.0-alpha.1'
-
-  s.source_files = 'ReactiveCocoa/*.swift'
-end
+        ]
+      },
+      "source_files": "ReactiveCocoa/*{AppKit,NSControl,NSText,UI}*",
+      "osx": {
+        "exclude_files": "ReactiveCocoa/UI*"
+      },
+      "ios": {
+        "exclude_files": "ReactiveCocoa/*{AppKit,NSControl,NSText}*"
+      }
+    }
+  ]
+}
