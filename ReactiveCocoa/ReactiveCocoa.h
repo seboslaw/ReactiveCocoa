@@ -71,7 +71,7 @@ FOUNDATION_EXPORT const unsigned char ReactiveCocoaVersionString[];
 	#import <ReactiveCocoa/UIControl+RACSignalSupport.h>
 	#import <ReactiveCocoa/UIDatePicker+RACSignalSupport.h>
 	#import <ReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIImagePickerController+RACSignalSupport.h>
+//	#import <ReactiveCocoa/UIImagePickerController+RACSignalSupport.h>
 	#import <ReactiveCocoa/UIRefreshControl+RACCommandSupport.h>
 	#import <ReactiveCocoa/UISegmentedControl+RACSignalSupport.h>
 	#import <ReactiveCocoa/UISlider+RACSignalSupport.h>

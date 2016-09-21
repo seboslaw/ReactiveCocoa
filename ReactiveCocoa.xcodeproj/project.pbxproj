@@ -13,7 +13,7 @@
 		7A7065851A3F8967001E8354 /* RACKVOProxySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7065831A3F8967001E8354 /* RACKVOProxySpec.m */; };
 		D01B7B6219EDD8FE00D26E01 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D05E662419EDD82000904ACA /* Nimble.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D01B7B6319EDD8FE00D26E01 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D037672B19EDA75D00A782A9 /* Quick.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D01B7B6419EDD94B00D26E01 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D047260C19E49F82006002AA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D01B7B6419EDD94B00D26E01 /* .framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D047260C19E49F82006002AA /* .framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D03764E819EDA41200A782A9 /* NSArray+RACSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D037642A19EDA41200A782A9 /* NSArray+RACSequenceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03764E919EDA41200A782A9 /* NSArray+RACSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D037642A19EDA41200A782A9 /* NSArray+RACSequenceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03764EA19EDA41200A782A9 /* NSArray+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D037642B19EDA41200A782A9 /* NSArray+RACSequenceAdditions.m */; };
@@ -267,8 +267,6 @@
 		D037663719EDA41200A782A9 /* UIDatePicker+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D03764D119EDA41200A782A9 /* UIDatePicker+RACSignalSupport.m */; };
 		D037663919EDA41200A782A9 /* UIGestureRecognizer+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D03764D219EDA41200A782A9 /* UIGestureRecognizer+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D037663B19EDA41200A782A9 /* UIGestureRecognizer+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D03764D319EDA41200A782A9 /* UIGestureRecognizer+RACSignalSupport.m */; };
-		D037663D19EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D03764D419EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D037663F19EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D03764D519EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.m */; };
 		D037664119EDA41200A782A9 /* UIRefreshControl+RACCommandSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D03764D619EDA41200A782A9 /* UIRefreshControl+RACCommandSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D037664319EDA41200A782A9 /* UIRefreshControl+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D03764D719EDA41200A782A9 /* UIRefreshControl+RACCommandSupport.m */; };
 		D037664519EDA41200A782A9 /* UISegmentedControl+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D03764D819EDA41200A782A9 /* UISegmentedControl+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -395,8 +393,8 @@
 		D037673919EDCA0E00A782A9 /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037673819EDCA0E00A782A9 /* SwiftSpec.swift */; };
 		D037673A19EDCA0E00A782A9 /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037673819EDCA0E00A782A9 /* SwiftSpec.swift */; };
 		D04725F019E49ED7006002AA /* ReactiveCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = D04725EF19E49ED7006002AA /* ReactiveCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D04725F619E49ED7006002AA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04725EA19E49ED7006002AA /* ReactiveCocoa.framework */; };
-		D047261719E49F82006002AA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D047260C19E49F82006002AA /* ReactiveCocoa.framework */; };
+		D04725F619E49ED7006002AA /* .framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04725EA19E49ED7006002AA /* .framework */; };
+		D047261719E49F82006002AA /* .framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D047260C19E49F82006002AA /* .framework */; };
 		D05E662519EDD82000904ACA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05E662419EDD82000904ACA /* Nimble.framework */; };
 		D05E662619EDD83000904ACA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05E662419EDD82000904ACA /* Nimble.framework */; };
 /* End PBXBuildFile section */
@@ -427,7 +425,7 @@
 			files = (
 				D01B7B6219EDD8FE00D26E01 /* Nimble.framework in Copy Frameworks */,
 				D01B7B6319EDD8FE00D26E01 /* Quick.framework in Copy Frameworks */,
-				D01B7B6419EDD94B00D26E01 /* ReactiveCocoa.framework in Copy Frameworks */,
+				D01B7B6419EDD94B00D26E01 /* .framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,12 +694,12 @@
 		D03766B719EDA60000A782A9 /* UIImagePickerControllerRACSupportSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImagePickerControllerRACSupportSpec.m; sourceTree = "<group>"; };
 		D037672B19EDA75D00A782A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D037673819EDCA0E00A782A9 /* SwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpec.swift; sourceTree = "<group>"; };
-		D04725EA19E49ED7006002AA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04725EA19E49ED7006002AA /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04725EE19E49ED7006002AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04725EF19E49ED7006002AA /* ReactiveCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveCocoa.h; sourceTree = "<group>"; };
 		D04725F519E49ED7006002AA /* ReactiveCocoa-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveCocoa-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04725FB19E49ED7006002AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D047260C19E49F82006002AA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D047260C19E49F82006002AA /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047261619E49F82006002AA /* ReactiveCocoa-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveCocoa-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047262719E49FE8006002AA /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D047262919E49FE8006002AA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -738,7 +736,7 @@
 			files = (
 				D05E662519EDD82000904ACA /* Nimble.framework in Frameworks */,
 				D037672D19EDA75D00A782A9 /* Quick.framework in Frameworks */,
-				D04725F619E49ED7006002AA /* ReactiveCocoa.framework in Frameworks */,
+				D04725F619E49ED7006002AA /* .framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,7 +753,7 @@
 			files = (
 				D05E662619EDD83000904ACA /* Nimble.framework in Frameworks */,
 				D037672F19EDA78B00A782A9 /* Quick.framework in Frameworks */,
-				D047261719E49F82006002AA /* ReactiveCocoa.framework in Frameworks */,
+				D047261719E49F82006002AA /* .framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,9 +1046,9 @@
 		D04725EB19E49ED7006002AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D04725EA19E49ED7006002AA /* ReactiveCocoa.framework */,
+				D04725EA19E49ED7006002AA /* .framework */,
 				D04725F519E49ED7006002AA /* ReactiveCocoa-MacTests.xctest */,
-				D047260C19E49F82006002AA /* ReactiveCocoa.framework */,
+				D047260C19E49F82006002AA /* .framework */,
 				D047261619E49F82006002AA /* ReactiveCocoa-iOSTests.xctest */,
 			);
 			name = Products;
@@ -1244,7 +1242,6 @@
 				D037660119EDA41200A782A9 /* RACTestScheduler.h in Headers */,
 				D03765A319EDA41200A782A9 /* RACMulticastConnection.h in Headers */,
 				D03765B719EDA41200A782A9 /* RACReplaySubject.h in Headers */,
-				D037663D19EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.h in Headers */,
 				D037656F19EDA41200A782A9 /* RACDisposable.h in Headers */,
 				D037654519EDA41200A782A9 /* NSURLConnection+RACSupport.h in Headers */,
 				D037661D19EDA41200A782A9 /* UIAlertView+RACSignalSupport.h in Headers */,
@@ -1323,7 +1320,7 @@
 			);
 			name = "ReactiveCocoa-Mac";
 			productName = ReactiveCocoa;
-			productReference = D04725EA19E49ED7006002AA /* ReactiveCocoa.framework */;
+			productReference = D04725EA19E49ED7006002AA /* .framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D04725F419E49ED7006002AA /* ReactiveCocoa-MacTests */ = {
@@ -1359,7 +1356,7 @@
 			);
 			name = "ReactiveCocoa-iOS";
 			productName = ReactiveCocoa;
-			productReference = D047260C19E49F82006002AA /* ReactiveCocoa.framework */;
+			productReference = D047260C19E49F82006002AA /* .framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D047261519E49F82006002AA /* ReactiveCocoa-iOSTests */ = {
@@ -1618,7 +1615,6 @@
 				D03765ED19EDA41200A782A9 /* RACSubject.m in Sources */,
 				D037664F19EDA41200A782A9 /* UIStepper+RACSignalSupport.m in Sources */,
 				D03765D119EDA41200A782A9 /* RACSerialDisposable.m in Sources */,
-				D037663F19EDA41200A782A9 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				D037653F19EDA41200A782A9 /* NSString+RACSupport.m in Sources */,
 				D037653719EDA41200A782A9 /* NSString+RACKeyPathUtilities.m in Sources */,
 				D03764FB19EDA41200A782A9 /* NSDictionary+RACSequenceAdditions.m in Sources */,
