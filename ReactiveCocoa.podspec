@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
     sp.dependency 'ReactiveCocoa/Core'
     sp.source_files = 'ReactiveCocoa/*{AppKit,NSControl,NSText,UI}*'
     sp.osx.exclude_files = 'ReactiveCocoa/UI*'
-    sp.ios.exclude_files = 'ReactiveCocoa/*{AppKit,NSControl,NSText}*'
+    sp.ios.exclude_files = 'ReactiveCocoa/*{AppKit,NSControl,NSText}*', 'ReactiveCocoa/UIImagePickerController+RACSignalSupport*'
   end
 end
