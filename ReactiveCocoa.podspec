@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.8'
-  s.compiler_flags = '-DOS_OBJECT_USE_OBJC=0'
+  s.default_subspecs = 'UI'
 
   s.prepare_command = <<-'END'
     find . \( -regex '.*EXT.*\.[mh]$' -o -regex '.*metamacros\.[mh]$' \) -execdir mv {} RAC{} \;
@@ -20,17 +20,21 @@ Pod::Spec.new do |s|
   END
 
   s.subspec 'no-arc' do |sp|
-    sp.source_files = 'ReactiveCocoaFramework/ReactiveCocoa/RACObjCRuntime.{h,m}'
+    sp.source_files = 'ReactiveCocoa/RACObjCRuntime.{h,m}'
     sp.requires_arc = false
   end
 
   s.subspec 'Core' do |sp|
     sp.dependency 'ReactiveCocoa/no-arc'
-    sp.source_files = 'ReactiveCocoaFramework/ReactiveCocoa/**/*.{d,h,m}'
-    sp.private_header_files = '**/*Private.h', '**/*EXTRuntimeExtensions.h'
-    sp.exclude_files = 'ReactiveCocoaFramework/ReactiveCocoa/RACObjCRuntime.{h,m}'
-    sp.ios.exclude_files = '**/*{AppKit,NSControl,NSText}*'
-    sp.osx.exclude_files = '**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*'
-    sp.header_dir = 'ReactiveCocoa'
+    sp.source_files = 'ReactiveCocoa/*.{d,h,m}', "ReactiveCocoa/extobjc/*.{h,m}"
+    sp.private_header_files = 'ReactiveCocoa/*Private.h'
+    sp.exclude_files = 'ReactiveCocoa/*{RACObjCRuntime,AppKit,NSControl,NSText,UIActionSheet,UI}*'
+  end
+
+  s.subspec 'UI' do |sp|
+    sp.dependency 'ReactiveCocoa/Core'
+    sp.source_files = 'ReactiveCocoa/*{AppKit,NSControl,NSText,UI}*'
+    sp.osx.exclude_files = 'ReactiveCocoa/UI*'
+    sp.ios.exclude_files = 'ReactiveCocoa/*{AppKit,NSControl,NSText}*'
   end
 end
